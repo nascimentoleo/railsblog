@@ -1,2 +1,17 @@
-<h1>Hello, Rails!</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-8">
+      <div class="card">
+        <h5 class="card-header">
+          Hello, Rails!
+        </h5>
+        <div class="card-body">
+          <h5 class="card-title">This is my first website with Rails</h5>
+          <p class="card-text">Enjoy my blog</p>
+          <%= button_to "My Blog", articles_path,
+                        :class => "btn btn-primary", :method => :get %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

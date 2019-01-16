@@ -1,23 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-9">
+              <h2>Listing articles</h2>
+            </div>
+            <div class="col-1">
+              <%= button_to "New article", new_article_path,
+                            :class => "btn btn-success", :method => :get %>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <tr>
+              <th>Title</th>
+              <th>Text</th>
+              <th>Actions</th>
+            </tr>
 
-<h1>Listing articles</h1>
+            <% @articles.each do |article| %>
+              <tr>
+                <td><%= article.title %></td>
+                <td><%= article.text %></td>
+                <td class="row">
+                  <%= button_to "Show", article_path(article),
+                                :class => "btn btn-default", :method => :get %>
+                  <%= button_to "Edit", edit_article_path(article),
+                                :class => "btn btn-info", :method => :get %>
+                  <%= button_to "Destroy", article_path(article),
+                                :class => "btn btn-danger", :method => :delete,
+                                data: { confirm: 'Are you sure?' } %>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'New article', new_article_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-  </tr>
-
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-                      method: :delete,
-                      data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>

@@ -1,13 +1,17 @@
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+  <div class="row">
+    <div class="form-group">
+      <p>
+        <%= form.label :commenter %><br>
+        <%= form.text_field :commenter, class: "form-control" %>
+      </p>
+      <p>
+        <%= form.label :body %><br>
+        <%= form.text_area :body, class: "form-control"%>
+      </p>
+      <p>
+        <%= form.submit 'Create Comment', :class => 'btn btn-success'%>
+      </p>
+    </div>
+  </div>
 <% end %>

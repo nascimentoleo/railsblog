@@ -1,15 +1,17 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-</p>
+<div class="row">
+  <ul class="list-group col-8">
+    <li class="list-group-item">
+      <strong>Commenter:</strong>
+      <%= comment.commenter %>
+    </li>
+    <li class="list-group-item">
+      <strong>Comment:</strong>
+      <%= comment.body %>
+    </li>
+  </ul>
+  <p>
+    <%= button_to "Destroy Comment", [comment.article, comment],
+                  :class => "btn btn-danger", :method => :delete,
+                  data: { confirm: 'Are you sure?' } %>
+  </p>
+</div>
