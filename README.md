@@ -1,6 +1,6 @@
 # RailsBlog
 
-Simple Blog using Ruby on Rails Full Stack and MySQL DataBase, with **Ruby** in version 2.6.
+Simple Blog using Ruby on Rails Full Stack and MySQL DataBase
 
 ## Dependencies
 
