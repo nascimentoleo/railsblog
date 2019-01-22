@@ -5,7 +5,9 @@ Simple Blog using Ruby on Rails Full Stack and MySQL DataBase, with **Ruby** in 
 ## Dependencies
 
 *- Ruby 2.6*
+
 *- Ruby on Rails 5.5.2*
+
 *- MySQL 5.7.24*
 
 ## Build
