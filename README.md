@@ -1,25 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Blog using Ruby on Rails Full Stack and MySQL DataBase, with **Ruby** in version 2.6.
 
+## Dependencies
 
-Things you may want to cover:
+*Ruby 2.6
+Ruby on Rails 5.5.2
+MySQL 5.7.24*
 
-* Ruby version
+## Build
 
-* System dependencies
+**1. Install gems**
 
-* Configuration
+```
+bundle install
+```
 
-* Database creation
+**2. Create database**
 
-* Database initialization
+```
+rake db:create
+```
 
-* How to run the test suite
+**3. Run migrations**
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rake db:migrate
+```
 
-* Deployment instructions
+**4. Start server**
 
-* ...
+```
+rails s -p 3000 -b '0.0.0.0'
+
+```
